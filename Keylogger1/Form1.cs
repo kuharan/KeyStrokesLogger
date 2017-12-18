@@ -51,6 +51,7 @@ namespace KeyStokeLogger
             key.Enabled = true;
             log.Enabled = true;
             notifyIcon1.ShowBalloonTip(5000);
+           
             button2.Enabled = true;
             button1.Enabled = false;
         }

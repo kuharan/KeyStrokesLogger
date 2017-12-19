@@ -31,7 +31,7 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(InitalForm));
             this.button1 = new System.Windows.Forms.Button();
-           // this.notifyIcon1 = new System.Windows.Forms.NotifyIcon(this.components);
+            //this.notifyIcon1 = new System.Windows.Forms.NotifyIcon(this.components);
             this.key = new System.Windows.Forms.Timer(this.components);
             this.log = new System.Windows.Forms.Timer(this.components);
             this.button2 = new System.Windows.Forms.Button();
@@ -115,7 +115,7 @@
             // timer1
             // 
             this.timer1.Enabled = true;
-            this.timer1.Interval = 6000;
+            this.timer1.Interval = 5000;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
             // InitalForm

